@@ -1,0 +1,116 @@
+header {
+  z-index: 100;
+  top: 0;
+  grid-area: header;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid lightsteelblue;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.site {
+  width: max-content;
+  font-size: 32px;
+  font-family: 'PT SansNarrow', sans-serif;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+.site2 {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.site::first-letter {
+  color: crimson;
+}
+
+.cats {
+  display: flex;
+  justify-content: space-around;
+  align-content: start;
+}
+
+.cats .cat {
+  display: grid;
+  overflow: hidden;
+  grid-template-areas: 'card card card' 'button1 button2 button3';
+  grid-template-columns: 33% 34% 33%;
+}
+
+.cats .cat {
+  display: none;
+}
+
+.cats .cat .card {
+  border: 2px solid rgba(220, 20, 60, 0.7);
+  text-align: center;
+  background: rgba(220, 20, 60, 0.7);
+  grid-area: card;
+}
+
+.cats .cat .beforeLine {
+  font-size: 20px;
+  font-family: 'PT SansNarrow', sans-serif;
+  color: white;
+}
+
+.cats .cat1 {
+  display: grid;
+}
+
+.button1 {
+  grid-area: button1;
+}
+
+.button2 {
+  grid-area: button2;
+}
+
+.button3 {
+  grid-area: button3;
+}
+
+.button1,
+.button2,
+.button3 {
+  border-radius: 100px;
+  margin-top: 8%;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.button1:hover,
+.button2:hover,
+.button3:hover {
+  transform: scale(1.08);
+  transition-duration: 500ms;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapperImage img:hover {
+  transform: scale(1.02);
+  transition-duration: 500ms;
+}
+
+.button1 img,
+.button3 img {
+  width: 40%;
+  height: auto;
+  cursor: pointer;
+}
+
+.button2 img {
+  width: 41%;
+  height: auto;
+  cursor: pointer;
+}
+
+.catWait {
+  display: none;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--https://www.w3schools.com/css/css_rwd_viewport.asp-->
+  <title>05-evolve-cat</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<header class="site-header">
+  <h1 class="site-header__first-name">
+    Кошачий кусь
+  </h1>
+  <h2 class="site-header__second-name">
+    Как вампир, но милее
+  </h2>
+</header>
+<main class="main-part">
+  <!--need for centering text-->
+  <section class="wrapper-center">
+    <form class="form-window">
+      <input class="form-window__radio-button-1" type="radio" name="radioButton" id="radio1" checked>
+      <input class="form-window__radio-button-2" type="radio" name="radioButton" id="radio2">
+      <input class="form-window__radio-button-3" type="radio" name="radioButton" id="radio3">
+      <h2 class="form-window__cat-header">
+        Oh my, вы попали в лапы кота!
+      </h2>
+      <h2 class="form-window__non-cat-header">
+        Oh my, вы попали в лапы кота! Подожди, что?
+      </h2>
+      <article class="wrapper-card">
+        <div class="wrapper-card__image image-cat">
+          <img src="img/cat.jpg" alt="Cat" />
+        </div>
+        <div class="wrapper-card__image image-pig">
+          <img src="img/pig.jpg" alt="Pig" />
+        </div>
+        <div class="wrapper-card__image image-dog">
+          <img src="img/dog.jpg" alt="Dog" />
+        </div>
+        <div class="wrapper-card__number-input">
+          <label class="numberButton" for="number1">Сколько кусь?</label>
+          <input class="numberButton" type="number" min="0" placeholder="0" id="number1">
+        </div>
+        <div class="wrapper-card__text-input">
+          <label class="textButton" for="textButton">Когтями царапать?</label>
+          <input class="textButton" type="text" placeholder="Конечно!" id="textButton">
+        </div>
+      </article>
+      <!--div only to wrap label-->
+      <div class="form-window__wrapper-radio-1">
+        <label class="form-window__wrapper-radio-label" for="radio1">Мяу</label>
+      </div>
+      <div class="form-window__wrapper-radio-2">
+        <label class="form-window__wrapper-radio-label" for="radio2">Тяф</label>
+      </div>
+      <div class="form-window__wrapper-radio-3">
+        <label class="form-window__wrapper-radio-label" for="radio3">Хрю</label>
+      </div>
+      <div class="wrapper-checkbox">
+        <input class="wrapper-checkbox__check-button" type="checkbox" id="check-button">
+        <label class="wrapper-checkbox__check-button" for="check-button">Верю в летающего кошачьего монстра</label>
+        <div class="ghost-animation">
+          <img src="img/scary.gif" alt="Ghost" />
+        </div>
+      </div>
+      <div class="wrapper-email">
+        <label class="wrapper-email__button" for="textButton2">Email (кота)</label>
+        <input class="wrapper-email__button" type="text" placeholder="cat@rules.com" id="textButton2" required>
+      </div>
+      <div class="wrapper-submit">
+        <button class="wrapper-submit__button" type="submit">Поехали!</button>
+      </div>
+    </form>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Yandex";
+  src: url("fonts/ptsansnarrow/sansnarrow.ttf");
+}
+
+.search-box {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.search-box__logo {
+  font-family: Yandex, sans-serif;
+  font-size: 40px;
+  padding: 10px 20px 10px 100px;
+}
+
+.search-box__logo:first-letter {
+  color: red;
+}
+
+.search-input {
+  display: block;
+  width: 40%;
+  min-width: 300px;
+  padding: 15px;
+  border: 2px solid #f3ce00;
+}
+
+.search-box__button {
+  padding: 15px;
+  background-color: #f3ce00;
+  border: 2px solid #f3ce00;
+}
+
+.suggests-wrapper {
+  position: absolute;
+  z-index: 100;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 750px) {
+  .search-box__logo {
+    display: none;
+  }
+
+  .search-box {
+    margin-left: 10%;
+  }
+
+  .suggests-wrapper {
+    left: 100px;
+  }
+}
+
+@media screen and (min-width: 751px) {
+  .suggests-wrapper {
+    left: 280px;
+  }
+}
+
+.suggest:focus {
+  background-color: #f3ce00;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.suggest {
+  margin: 1px;
+  border: 1px solid black;
+}
+

@@ -1,0 +1,200 @@
+html {
+  height: 950px;
+}
+
+header {
+  top: 0;
+  background: white;
+  z-index: 999;
+}
+
+header > * {
+  width: max-content;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+body {
+  position: relative;
+
+  min-height: 100%;
+}
+
+.stick {
+  position: sticky;
+}
+
+header .site-name {
+  font-family: 'PT SansNarrow', sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+  color: rebeccapurple;
+  text-align: center;
+}
+
+.articles {
+  margin: auto;
+  display: block;
+}
+
+.cat {
+  margin: 10px;
+  display: inline-block;
+  min-width: 200px;
+  width: 400px;
+  border: 1px solid gray;
+}
+
+.button-label:checked ~ .articles .cat:hover {
+  transform: scale(1.05);
+}
+
+.name {
+  padding: 4px 4px 4px 4px;
+  font-size: 30px;
+  text-overflow: ellipsis; /*make dots if too long name*/
+  overflow: hidden;
+}
+
+.age, .spice, .illness, .short-description, .long-description, .information {
+  padding: 4px;
+  font-size: 20px;
+}
+
+.cat .image {
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.image:active {
+  transform: rotate(360deg);
+  transition: 100ms;
+}
+
+.cat:hover {
+  box-shadow: 0 0 10px;
+}
+
+.button-label {
+  display: none;
+}
+
+label {
+  font-size: 30px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.button-label:checked + label {
+  transform: rotate(90deg);
+}
+
+/*
+  When our button in "Vertical" mode
+ */
+.button-label:checked ~ .articles .long-description {
+  display: none;
+}
+
+.button-label:checked ~ .articles .annotation {
+  display: none;
+}
+
+.button-label:checked ~ .articles .cat {
+  height: 400px;
+}
+
+.button-label:checked ~ .articles .image {
+  height: 50%;
+}
+
+/*
+  When our button in "Horizontal" mode
+ */
+.button-label:not(:checked) ~ .articles .short-description {
+  display: none;
+}
+
+.button-label:not(:checked) ~ .articles .illness {
+  display: none;
+}
+
+.button-label:not(:checked) ~ .articles .spice {
+  display: none;
+}
+
+.button-label:not(:checked) ~ .articles .cat {
+  width: 90%;
+}
+
+.button-label:not(:checked) ~ .articles .image {
+  object-position: center;
+  min-width: 100px;
+  float: left;
+  width: 50%;
+  margin: 2px 12px 2px 2px;
+  height: 50%;
+  object-fit: cover;
+}
+
+.links, .link-name {
+  text-decoration: none;
+}
+
+.links:visited {
+  color: cadetblue;
+}
+
+.link-name:visited {
+  color: black;
+}
+
+.link-name:active {
+  color: black;
+}
+
+.link-name:hover {
+  color: orange;
+}
+
+.age:hover {
+  color: lawngreen;
+}
+
+.spice:hover {
+  color: fuchsia;
+}
+
+.illness:hover {
+  color: blue;
+}
+
+.short-description:hover {
+   color: red;
+ }
+
+.links:active {
+  color: cadetblue;
+}
+
+.copyrighting {
+  position: absolute;
+  bottom: -10px;
+  font-size: 15px;
+  text-align: left;
+  color: cadetblue;
+}

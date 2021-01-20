@@ -1,0 +1,502 @@
+main {
+  margin: 0 auto;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+input,
+.preview-1,
+.preview-2,
+.preview-3,
+.preview-4,
+.preview-5,
+.preview-6,
+.icon-arrow-114,
+.icon-arrow-125,
+.icon-arrow-136,
+.icon-arrow-214,
+.icon-arrow-225,
+.icon-arrow-236,
+.text-1,
+.text-2,
+.text-3,
+.text-4,
+.text-5,
+.text-6,
+label[for='button21'],
+label[for='button22'],
+label[for='button23'],
+label[for='button41'],
+label[for='button42'],
+label[for='button43'],
+label[for='button44'] {
+  display: none;
+}
+
+.icon-rotate:active {
+  transform: rotate(360deg);
+  transition-duration: 0.2s;
+}
+
+.icons-wrapper label[for='button43'] .icon-rotate,
+.icons-wrapper label[for='button44'] .icon-rotate,
+.icons-wrapper label[for='button41'] .icon-rotate {
+  color: black;
+  opacity: 1;
+}
+
+.button21:checked ~ .icons-wrapper label[for='button22'],
+.button23:checked ~ .icons-wrapper label[for='button21'],
+.button22:checked ~ .icons-wrapper label[for='button23'],
+.button41:checked ~ .icons-wrapper label[for='button42'],
+.button42:checked ~ .icons-wrapper label[for='button43'],
+.button43:checked ~ .icons-wrapper label[for='button44'],
+.button44:checked ~ .icons-wrapper label[for='button41'] {
+  display: block;
+}
+
+.button21:checked ~ .icons-wrapper label[for='button21'],
+.button21:checked ~ .icons-wrapper label[for='button23'],
+.button22:checked ~ .icons-wrapper label[for='button21'],
+.button22:checked ~ .icons-wrapper label[for='button22'],
+.button23:checked ~ .icons-wrapper label[for='button22'],
+.button23:checked ~ .icons-wrapper label[for='button23'],
+.button41:checked ~ .icons-wrapper label[for='button41'],
+.button41:checked ~ .icons-wrapper label[for='button43'],
+.button41:checked ~ .icons-wrapper label[for='button44'],
+.button42:checked ~ .icons-wrapper label[for='button42'],
+.button42:checked ~ .icons-wrapper label[for='button41'],
+.button42:checked ~ .icons-wrapper label[for='button44'],
+.button43:checked ~ .icons-wrapper label[for='button42'],
+.button43:checked ~ .icons-wrapper label[for='button43'],
+.button43:checked ~ .icons-wrapper label[for='button41'],
+.button44:checked ~ .icons-wrapper label[for='button44'],
+.button44:checked ~ .icons-wrapper label[for='button43'],
+.button44:checked ~ .icons-wrapper label[for='button42'] {
+  display: none;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+.image-wrapper {
+  position: absolute;
+  left: 404px;
+  right: 404px;
+  top: 80px;
+  width: 632px;
+  height: 632px;
+  overflow: hidden;
+}
+
+.image-wrapper .image {
+  width: 632px;
+  height: 632px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.button5:not(:checked) ~ .icons-wrapper .icon-flip {
+  transform: scale(1, 1);
+  transition-duration: 0.2s;
+}
+
+
+.button5:checked ~ .icons-wrapper .icon-flip {
+  transform: scale(-1, 1);
+  transition-duration: 0.2s;
+}
+
+.button1:checked ~ .icons-wrapper .icon-fill,
+.button22:checked ~ .icons-wrapper .icon-scale,
+.button23:checked ~ .icons-wrapper .icon-scale,
+.button4:checked ~ .icons-wrapper .icon-rotate,
+.button5:checked ~ .icons-wrapper .icon-flip {
+  fill: black;
+  opacity: 1;
+}
+
+.icon-logo:active {
+  animation: drags 0.4s forwards;
+}
+
+.icon-scale:active {
+  animation: scaleanim 0.2s forwards;
+}
+
+.icon-fill:active {
+  animation: fillanim 0.3s forwards;
+}
+
+@keyframes fillanim {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.8);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes scaleanim {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.4, 1.4);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes drags {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  90% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.button1:checked ~ .image-wrapper {
+  transition: height;
+  transition-duration: 1s;
+  top: 122px;
+}
+
+.button1:checked ~ .image-wrapper .image {
+  transition: height;
+  transition-duration: 1s;
+  box-shadow: none;
+  object-fit: contain;
+}
+
+.button5:not(:checked) ~ .image-wrapper .image-wrapper-flip {
+  transition: transform;
+  transition-duration: 0.5s;
+  transform: scale(1, 1);
+}
+
+.button5:checked ~ .image-wrapper .image-wrapper-flip {
+  transition: transform;
+  transition-duration: 0.5s;
+  transform: scale(-1, 1);
+}
+
+.button21:checked ~ .image-wrapper .image-wrapper-scale {
+  transition: transform;
+  transition-duration: 0.5s;
+  transform: scale(1);
+}
+
+.button22:checked ~ .image-wrapper .image-wrapper-scale {
+  transition: transform;
+  transition-duration: 0.5s;
+  transform: scale(1.2);
+}
+
+.button23:checked ~ .image-wrapper .image-wrapper-scale {
+  transition: transform;
+  transition-duration: 0.5s;
+  transform: scale(1.4);
+}
+
+.icons-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 404px;
+  width: 632px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  opacity: 0.8;
+  fill: #444444;
+  width: 48px;
+  height: 48px;
+}
+
+.button41:checked ~ .image-wrapper .image-wrapper-rotate {
+  transition-duration: 0.5s;
+  transform: rotate(0deg);
+}
+
+.button42:checked ~ .image-wrapper .image-wrapper-rotate {
+  transition-duration: 0.5s;
+  transform: rotate(90deg);
+}
+
+.button43:checked ~ .image-wrapper .image-wrapper-rotate {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+
+.button44:checked ~ .image-wrapper .image-wrapper-rotate {
+  transition-duration: 0.5s;
+  transform: rotate(270deg);
+}
+
+.icon-logo {
+  opacity: 1;
+}
+
+.previews-wrapper {
+  position: absolute;
+  width: 695px;
+  left: 373px;
+  right: 372px;
+  bottom: 37px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.preview {
+  width: 170px;
+  height: 169px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.filter1:checked ~ .image-wrapper .image {
+  transition: filter;
+  transition-duration: 1.35s;
+  filter: grayscale(0) sepia(0) hue-rotate(0deg) brightness(1) blur(0px) contrast(100%);
+}
+
+.preview-2 {
+  filter: grayscale(100%);
+}
+
+.filter2:checked ~ .image-wrapper .image {
+  transition: filter;
+  transition-duration: 1.35s;
+  filter: grayscale(100%) sepia(0) hue-rotate(0deg) brightness(1) blur(0px) contrast(100%);
+}
+
+.preview-3 {
+  filter: sepia(1);
+}
+
+.filter3:checked ~ .image-wrapper .image {
+  transition: filter;
+  transition-duration: 1.35s;
+  filter: grayscale(0) sepia(1) hue-rotate(0deg) brightness(1) blur(0px) contrast(100%);
+}
+
+.preview-4 {
+  filter: hue-rotate(200deg);
+}
+
+.filter4:checked ~ .image-wrapper .image {
+  transition: filter;
+  transition-duration: 1.35s;
+  filter: grayscale(0) sepia(0) hue-rotate(200deg) brightness(1) blur(0px) contrast(100%);
+}
+
+.preview-5 {
+  filter: sepia(0.5) hue-rotate(30deg) brightness(1.8);
+}
+
+.filter5:checked ~ .image-wrapper .image {
+  transition: filter;
+  transition-duration: 1.35s;
+  filter: grayscale(0) sepia(0.5) hue-rotate(30deg) brightness(1.8) blur(0px) contrast(100%);
+}
+
+.preview-6 {
+  filter: hue-rotate(300deg) blur(2px) contrast(200%);
+}
+
+.filter6:checked ~ .image-wrapper .image {
+  transition: filter;
+  transition-duration: 1.35s;
+  filter: grayscale(0) sepia(0) hue-rotate(300deg) brightness(1) blur(2px) contrast(200%);
+}
+
+.text-wrapper {
+  position: absolute;
+  width: 695px;
+  left: 373px;
+  right: 372px;
+  bottom: 221px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  width: 170px;
+  height: 22px;
+}
+
+.filter1:checked ~ .text-wrapper .text-1 {
+  font-weight: bold;
+}
+
+.filter2:checked ~ .text-wrapper .text-2 {
+  font-weight: bold;
+}
+
+.filter3:checked ~ .text-wrapper .text-3 {
+  font-weight: bold;
+}
+
+.filter4:checked ~ .text-wrapper .text-4 {
+  font-weight: bold;
+}
+
+.filter5:checked ~ .text-wrapper .text-5 {
+  font-weight: bold;
+}
+
+.filter6:checked ~ .text-wrapper .text-6 {
+  font-weight: bold;
+}
+
+.icon-arrow-1,
+.icon-arrow-2 {
+  position: absolute;
+  height: 31px;
+  top: 881px;
+}
+
+.icon-arrow-1 {
+  transform: rotate(90deg);
+  left: 308px;
+}
+
+.icon-arrow-2 {
+  transform: rotate(-90deg);
+  right: 307px;
+}
+
+.icon-arrow-114,
+.icon-arrow-236 {
+  opacity: 0.2;
+  fill: #444444;
+}
+
+.slider14:checked ~ .previews-wrapper .preview-1,
+.slider14:checked ~ .previews-wrapper .preview-2,
+.slider14:checked ~ .previews-wrapper .preview-3,
+.slider14:checked ~ .previews-wrapper .preview-4,
+.slider14:checked ~ .text-wrapper .text-1,
+.slider14:checked ~ .text-wrapper .text-2,
+.slider14:checked ~ .text-wrapper .text-3,
+.slider14:checked ~ .text-wrapper .text-4,
+.slider14:checked ~ .icon-arrow-114,
+.slider14:checked ~ label[for='slider25'] .icon-arrow-214 {
+  display: block;
+}
+
+.slider25:checked ~ .previews-wrapper .preview-2,
+.slider25:checked ~ .previews-wrapper .preview-3,
+.slider25:checked ~ .previews-wrapper .preview-4,
+.slider25:checked ~ .previews-wrapper .preview-5,
+.slider25:checked ~ .text-wrapper .text-2,
+.slider25:checked ~ .text-wrapper .text-3,
+.slider25:checked ~ .text-wrapper .text-4,
+.slider25:checked ~ .text-wrapper .text-5,
+.slider25:checked ~ label[for='slider14'] .icon-arrow-125,
+.slider25:checked ~ label[for='slider36'] .icon-arrow-225 {
+  display: block;
+}
+
+.slider36:checked ~ .previews-wrapper .preview-3,
+.slider36:checked ~ .previews-wrapper .preview-4,
+.slider36:checked ~ .previews-wrapper .preview-5,
+.slider36:checked ~ .previews-wrapper .preview-6,
+.slider36:checked ~ .text-wrapper .text-3,
+.slider36:checked ~ .text-wrapper .text-4,
+.slider36:checked ~ .text-wrapper .text-5,
+.slider36:checked ~ .text-wrapper .text-6,
+.slider36:checked ~ label[for='slider25'] .icon-arrow-136,
+.slider36:checked ~ .icon-arrow-236 {
+  display: block;
+}
+
+.button3:checked ~ .image-wrapper .image {
+  object-fit: cover;
+}
+
+.button3:checked ~ .image-wrapper,
+.button3:checked ~ .image-wrapper .image-wrapper-rotate,
+.button3:checked ~ .image-wrapper .image-wrapper-scale,
+.button3:checked ~ .image-wrapper .image-wrapper-flip {
+  transform: none;
+}
+
+.button3:checked ~ .image-wrapper .image {
+  filter: none;
+}
+
+.button3:not(:checked) ~ .image-wrapper {
+  transition: top;
+  transition-duration: 2s;
+  top: 80px;
+}
+
+.button3:checked ~ .image-wrapper {
+  transition: top;
+  transition-duration: 2s;
+  top: 120px;
+}
+
+.button3:checked ~ .icons-wrapper .icon-fill,
+.button3:checked ~ .icons-wrapper .icon-scale,
+.button3:checked ~ .icons-wrapper .icon-rotate,
+.button3:checked ~ .icons-wrapper .icon-flip,
+.button3:checked ~ .previews-wrapper,
+.button3:checked ~ .text-wrapper,
+.button3:checked ~ .icon-arrow-1,
+.button3:checked ~ .icon-arrow-2,
+.button3:checked ~ label[for='slider14'] .icon-arrow-125,
+.button3:checked ~ label[for='slider25'] .icon-arrow-136,
+.button3:checked ~ label[for='slider25'] .icon-arrow-214,
+.button3:checked ~ label[for='slider36'] .icon-arrow-225 {
+  display: none;
+}
+
+.button3:not(:checked) ~ .icons-wrapper .icon-logo {
+  fill: url(#a);
+}
+
+.button3:checked ~ .icons-wrapper .icon-logo {
+  fill: url(#b);
+}

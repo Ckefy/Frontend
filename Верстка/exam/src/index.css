@@ -1,0 +1,87 @@
+/* TODO */
+.cal-wrapper {
+  position: absolute;
+  left: 5.46%;
+  right: 55.7%;
+  top: 6.26%;
+  bottom: 37.23%;
+  width: 400px;
+  height: 500px;
+  display: grid;
+  grid-template-rows: 100px 50px 350px;
+  border: 1px black solid;
+}
+
+input {
+  display: none;
+}
+
+.cal-header h2 {
+  margin-left: 20px;
+}
+
+.cal-days {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: darkgray;
+}
+
+.cal-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cal-main p {
+  width: 14%;
+  text-align: center;
+}
+
+.day1:checked ~ .cal-wrapper .cal-main .pday1,
+.day2:checked ~ .cal-wrapper .cal-main .pday2,
+.day3:checked ~ .cal-wrapper .cal-main .pday3,
+.day4:checked ~ .cal-wrapper .cal-main .pday4,
+.day5:checked ~ .cal-wrapper .cal-main .pday5,
+.day6:checked ~ .cal-wrapper .cal-main .pday6,
+.day7:checked ~ .cal-wrapper .cal-main .pday7,
+.day8:checked ~ .cal-wrapper .cal-main .pday8,
+.day9:checked ~ .cal-wrapper .cal-main .pday9,
+.day10:checked ~ .cal-wrapper .cal-main .pday10,
+.day11:checked ~ .cal-wrapper .cal-main .pday11,
+.day12:checked ~ .cal-wrapper .cal-main .pday12,
+.day13:checked ~ .cal-wrapper .cal-main .pday13,
+.day14:checked ~ .cal-wrapper .cal-main .pday14,
+.day15:checked ~ .cal-wrapper .cal-main .pday15,
+.day16:checked ~ .cal-wrapper .cal-main .pday16,
+.day17:checked ~ .cal-wrapper .cal-main .pday17,
+.day18:checked ~ .cal-wrapper .cal-main .pday18,
+.day19:checked ~ .cal-wrapper .cal-main .pday19,
+.day10:checked ~ .cal-wrapper .cal-main .pday10,
+.day21:checked ~ .cal-wrapper .cal-main .pday21,
+.day22:checked ~ .cal-wrapper .cal-main .pday22,
+.day23:checked ~ .cal-wrapper .cal-main .pday23,
+.day24:checked ~ .cal-wrapper .cal-main .pday24,
+.day25:checked ~ .cal-wrapper .cal-main .pday25,
+.day26:checked ~ .cal-wrapper .cal-main .pday26,
+.day27:checked ~ .cal-wrapper .cal-main .pday27,
+.day28:checked ~ .cal-wrapper .cal-main .pday28,
+.day29:checked ~ .cal-wrapper .cal-main .pday29,
+.day30:checked ~ .cal-wrapper .cal-main .pday30 {
+  background-color: yellow;
+  border: 1px solid white;
+  border-radius: 1000px;
+}
+
+.hidden {
+  display: none;
+}
+
+.cal-wrapper .cal-main .pday8,
+.cal-wrapper .cal-main .pday10,
+.cal-wrapper .cal-main .pday14,
+.cal-wrapper .cal-main .pday15 {
+  border-bottom: 2px green solid;
+}
+

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--https://www.w3schools.com/css/css_rwd_viewport.asp-->
+    <title>06-back-to-the-future</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <input type="checkbox" id="settingsWindow" class="settingsWindowButton">
+    <input type="checkbox" id="button11" class="button-setting button-setting-11" checked>
+    <input type="checkbox" id="button12" class="button-setting button-setting-12" checked>
+    <input type="checkbox" id="button21" class="button-setting button-setting-21" checked>
+    <input type="checkbox" id="button22" class="button-setting button-setting-22" checked>
+    <input type="checkbox" id="button31" class="button-setting button-setting-31" checked>
+    <input type="checkbox" id="button32" class="button-setting button-setting-32" checked>
+    <input type="checkbox" id="button33" class="button-setting button-setting-33" checked>
+    <input type="checkbox" id="button34" class="button-setting button-setting-34" checked>
+    <section class="modal-window">
+      <label for="button11">Посещаемое</label>
+      <label for="button12">Лучшие анекдоты</label>
+      <label for="button21">Телепрограмма</label>
+      <label for="button22">Автомобильные новости</label>
+      <label for="button31">Погода</label>
+      <label for="button32">Пробки</label>
+      <label for="button33">Карта Москвы</label>
+      <label for="button34">Афиша</label>
+    </section>
+    <header class="header">
+      <section class="header__city">
+        &#8663; Москва
+      </section>
+      <section class="header__settings">
+        <label class="settings-label" for="settingsWindow">Настройкa</label>
+      </section>
+      <aside class="mail">
+          <section class="header__login">
+            Лева из Би-2
+          </section>
+          <section class="header__counterMails">
+            Почта: 1 письмо
+          </section>
+      </aside>
+    </header>
+    <main>
+      <aside class="news">
+          <section class="news-block">
+            <article class="news-block__headerNews1">
+              Сейчас в СМИ
+            </article>
+            <article class="news-block__headerNews2">
+              В Москве
+            </article>
+            <article class="news-block__headerNews3">
+              11 июня пятница 11:22
+            </article>
+            <ul class="news-block__contentNews">
+              <li>В Кремле отрегаировали на анекдот про ежика в лесу и пенек</li>
+              <li>Как же сложно писать новости, особенно нормальные</li>
+              <li>Ладно, я попробую, главное не перепутать со вкладкой мемов</li>
+              <li>В Мойке снова нашли морского котика с очень мокрым носиком</li>
+              <li>Ну вот, все-таки перепутал и сделал мемы. Извините</li>
+            </ul>
+          </section>
+          <section class="news__ads">
+            <img src="img/concert.jpg" alt="Ads" />
+          </section>
+      </aside>
+      <nav class="navigate">
+        <a href="https://vk.com/topic-92876084_34021461" class="navigate__li">Видео</a>
+        <a href="https://vk.com/topic-92876084_34021461" class="navigate__li">Картинки</a>
+        <a href="https://vk.com/topic-92876084_34021461" class="navigate__li">Новости</a>
+        <a href="https://vk.com/topic-92876084_34021461" class="navigate__li">Карты</a>
+        <a href="https://vk.com/topic-92876084_34021461" class="navigate__li">Маркет</a>
+        <a href="https://vk.com/topic-92876084_34021461" class="navigate__li">Переводчик</a>
+        <a href="https://vk.com/topic-92876084_34021461" class="navigate__li">Музыка</a>
+        <a href="https://vk.com/topic-92876084_34021461" class="navigate__li">Чай</a>
+        <a href="https://vk.com/topic-92876084_34021461" class="navigate__li">Кофе</a>
+        <a href="https://vk.com/topic-92876084_34021461" class="navigate__li">Потанцуем</a>
+        <a href="https://vk.com/topic-92876084_34021461" class="navigate__li">еще</a>
+      </nav>
+      <!--wrapper-->
+      <div class="search-box">
+        <article class="search-box__logo">
+          Яндекс
+        </article>
+        <label for="search"></label>
+        <input type="text" id="search" class="search-input">
+        <button class="search-box__button">Найти</button>
+        <span class="kek"></span>
+      </div>
+      <!--wrapper-->
+      <div class="banner">
+        <img src="img/banner1.jpg" alt="Banner" />
+      </div>
+      <article class="widgets">
+        <section class="widgets__columnWidget1">
+          <!--wrapper-->
+          <div class="widget widget11">
+            <h3 class="widget__header">Посещаемое</h3>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>Маркет</b> - продажа китайского Apple</a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>Авто.ру</b> - Туссан третьей серии</a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>Недвижимость</b> - продам гараж</a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>Работа</b> - директор Иванова - жизнь фигова</a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>Здоровье</b> - лечимся силой земли</a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>Коллекции</b> - лучшие треки Лепса</a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>Авиабилеты</b> - правда границы закрыты</a>
+          </div>
+          <!--wrapper-->
+          <div class="widget widget12">
+            <input type="radio" id="meme1" class="widget__meme-button1" name="meme" checked>
+            <input type="radio" id="meme2" class="widget__meme-button2" name="meme">
+            <input type="radio" id="meme3" class="widget__meme-button3" name="meme">
+            <input type="radio" id="meme4" class="widget__meme-button4" name="meme">
+            <input type="radio" id="meme5" class="widget__meme-button5" name="meme">
+            <h3 class="widget__header">Лучшие анекдоты</h3>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li widget__meme1"> Раздел: <span class="widget__add-meme">Диференциальный<br></span>В десятом выпуске журнала "Мурзилка" 2020 года были опубликованы три загадки для дошкольников, школьников и студентов. Они звучали так:
+              1) Пустые отдыхаем,
+              А полные шагаем.
+              2) Над нами кверху ногами.
+              3) Кто удивил третьекурсников кт больше, чем басов, жахнувший первую лекцию на 5 часов?
+              Если ответы на первые две загадки были присланы в редакцию на следующий день, последняя же оставалось нерешённой до тех пор, пока редакторы не опубликовали ответы в следующем выпуске:
+              1) Сапоги
+              2) Таракан
+              3) Человек, который расставил к этой лекции таймкоды в записи на ютубе</a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li widget__meme3"> Раздел: <span class="widget__add-meme">Сос мыслом<br></span> Умер ктшник. Апостол Петр посмотрел в книгу его жизни, почесал нимб и говорит:
+              - У тебя грехов и праведных дел поровну. Поэтому я тебе дам возможность сделать выбор - рай или ад. И повел на экскурсию. Заходят в ад, а там куча студентов метушится, суетятся, лекции в х2 смотрят, орут, вольфрам виснет, серваки тупят, кофе литрами, дым сигаретный тучей висит, листы с выкладками валяются, телеграм пиликает - решают диффуры. ктшник отшатнулся - "О,такого мне и при жизни хватило! Хочу посмотреть на рай."
+              Приходят в рай, открывают дверь и... Та же самая картина - студенты,беготня,вольфрам, компы, крики. Ктшник в недоумении:
+              - Тут же то же самое!
+              - Не, тут у них ответы сойдутся! </a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li widget__meme5"> Раздел: <span class="widget__add-meme">Генадий<br></span> Все-таки хорошо, что наша встреча состоя­лась не в 2017 году, когда Университет ИТ­МО уже непосредствен­но в Америке (в Южной Дакоте) в седьмой раз стал чемпионом мира по программиров­анию, а то Энди еще бы больше расст­роился, а мне его жа­лко: все-таки, как он говорил, Трамп ― его друг.  Кстати, после этой победы один мой знак­омый задал такой воп­рос: «Чьи лица высеч­ены на скале в Южной Дакоте, где проход­ил чемпионат в этом году?», и сам же отв­етил: «Все думают, что это ― Вашингтон, Джефферсон, Линкольн и Рузвельт (Теодор­), а на самом деле  ― это Васильев, Па­рфенов, Шалыто и Ст­анкевич. </a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li widget__meme4"> Раздел: <span class="widget__add-meme">Страшные мем<br></span> К окончанию каникул (воскресенье 19 апреля) в ваши репозитории должны быть залиты решения всех сданных вами домашних работ (в том числе, сданных до момента начала карантина). </a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li widget__meme2"> Раздел: <span class="widget__add-meme">Первый<br></span> Наняла как-то бабка двух наркоманов свинью ей забить.
+              Заходят они в сарай, оттуда крики, шум, гам, визги.
+              Через час выходят и говорят:
+              -После осмотра туши убитого кабана были обнаружены две пули. Как делить кабана? </a>
+            <label for="meme1" class="labelMeme1">&#8635; Хочу еще</label>
+            <label for="meme2" class="labelMeme2">&#8635; Хочу еще</label>
+            <label for="meme3" class="labelMeme3">&#8635; Хочу еще</label>
+            <label for="meme4" class="labelMeme4">&#8635; Хочу еще</label>
+            <label for="meme5" class="labelMeme5">&#8635; Хочу еще</label>
+          </div>
+        </section>
+        <section class="widgets__columnWidget2">
+          <!--wrapper-->
+          <div class="widget widget21">
+            <h3 class="widget__header">Телепрограмма</h3>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>16:00</b> - Давай поженимся <span class="widget__add">Первый</span></a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>18:00</b> - Жить здорово <span class="widget__add">Первый</span></a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>21:00</b> - Важные новости страны <span class="widget__add">Второй</span></a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>21:10</b> - Беседы с pva701 о сгоревших библиотеках <span class="widget__add">КТ</span></a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>21:15</b> - Лучшие треки Лепса <span class="widget__add">Домашний</span></a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>21:47</b> - Лучшие треки Лепса, где он трезв <span class="widget__add">Перец</span></a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>21:48</b> - Действительно важные новости <span class="widget__add">Первый</span></a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>23:30</b> - Разговоры с Ильей Кокориным о почтах <span class="widget__add">КТ-флуд</span></a>
+          </div>
+          <!--wrapper-->
+          <div class="widget widget22">
+            <h3 class="widget__header">Автомобильные новости</h3>
+            <!--wrapper-->
+            <div class="widget__scroll">
+              <div class="widget__shadow widget__shadow-begin"></div>
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Очень интересная новость про машинки тут, я аж в шок пришел от такого котента <span class="widget__add">11:40</span></a>
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Лада опять что-то выпустила, невермайнд <span class="widget__add">12:30</span></a>
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Да и корейцы молодцы, недавно видел сравнение Vesta и Solaris <span class="widget__add">11:40</span></a>
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Так вот, шумка у второй получше будет, да и пластик внутри крепкий <span class="widget__add">02:40</span></a>
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Но не гроб как на Весте, где стучат тошно, а то еще и дедушка Ленин встанет <span class="widget__add">11:40</span></a>
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Там еще и сверчки появятся более раньше, так как пластик на холоде ек-ек <span class="widget__add">11:40</span></a>
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Ну там плюс еще 1.6 движок стоит на корейце и вроде на весте тоже, но почему-то жрет последняя как не в себя<span class="widget__add">4:30</span></a>
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Норма расхода на корее примерн 9.2 что ли, а на нашем чуде света около 10.5<span class="widget__add">11:40</span></a>
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> А уж комплектация Спорт от весты это вообще каеф, даже кожей не общили салон <span class="widget__add">4:30</span></a>
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> То ли дело Корея, соларис в массы, пацаны <span class="widget__add">4:30</span></a>
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Ну из седановского сегмента конечно, а так лучше что-нибудь другое взять <span class="widget__add">11:40</span></a>
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Ну там, крету какую-нибудь, кошкай не сильно потрепанный или тот же спортэдж от Киа <span class="widget__add">11:40</span></a>
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Вообщем у меня контент кончился, кто хочет пообщаться пишите в спортлото <span class="widget__add">4:30</span></a>
+              <div class="widget__shadow widget__shadow-end"></div>
+            </div>
+          </div>
+        </section>
+        <section class="widgets__columnWidget3">
+          <!--wrapper-->
+          <div class="widget widget31">
+            <h3 class="widget__header">Погода <img src="img/cloud.png" class="icon" alt="cloud"> <span class="widgetAdd">-3&#8451;</span></h3>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li">Вечером 20, днем -10</a>
+          </div>
+          <!--wrapper-->
+          <div class="widget widget32">
+            <h3 class="widget__header">Пробки <img src="img/lighter.jpg" class="icon" alt="traffic-icon"> <span class="widgetAdd">10 баллов</span></h3>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li">Лучше дома посидеть</a>
+          </div>
+          <!--wrapper-->
+          <div class="widget widget33">
+            <h3 class="widget__header">Карта Москвы</h3>
+            <div class="widget_two">
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>Сапсан</b></a>
+              <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>Белочка</b></a>
+            </div>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>Летающий единорог</b></a>
+          </div>
+          <div class="widget widget34">
+            <h3 class="widget__header">Афиша</h3>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Онегин Евгений <span class="widget__add">аниме</span></a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Жить здорово <span class="widget__add">роман</span></a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Важные новости страны <span class="widget__add">фигурное катание</span></a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Функциональное программирование <span class="widget__add">КТ</span></a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> НинтендоБой <span class="widget__add">японское</span></a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> Лучшие треки Лепса, где он трезв <span class="widget__add">фантастика</span></a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> С миру по канату<span class="widget__add">благотворительность</span></a>
+            <a href="https://vk.com/topic-92876084_34021461" class="widget__li"> <b>Концерты - Группа Шитлз</b></a>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

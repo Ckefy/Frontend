@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--https://www.w3schools.com/css/css_rwd_viewport.asp-->
+  <title>02-about-cats</title>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<header>
+  <h1 class="site">
+    Кошачий тиндер
+  </h1>
+  <h2 class="site site2">
+    Свинкам вход воспрещен
+  </h2>
+</header>
+<main>
+  <section class="cats">
+    <article class="cat cat1">
+      <div class="card">
+        <div class="wrapperImage">
+          <img id='img1' src="img/1.jpg" alt="Vasya" />
+          <script>
+            swipe(0)
+          </script>
+        </div>
+        <div class="beforeLine">
+          <p class="name">Арчи</p>
+          <p class="age">5 годиков</p>
+        </div>
+      </div>
+      <div class="button1" onclick="nextCat('bad')">
+        <img src="img/notGood.jpg" alt="Not Good" />
+      </div>
+      <div class="button2" onclick="nextCat('love')">
+        <img src="img/like.jpg" alt="Like" />
+      </div>
+      <div class="button3" onclick="nextCat('good')">
+        <img src="img/good.jpg" alt="Good" />
+      </div>
+    </article>
+    <article class="cat cat7">
+      <div class="card">
+        <div class="wrapperImage">
+          <img id='img7' src="img/7.jpg" alt="Masha" />
+          <script>
+            swipe(1)
+          </script>
+        </div>
+        <div class="beforeLine">
+          <p class="name">Чернышевский</p>
+          <p class="age">3 годика</p>
+        </div>
+      </div>
+      <div class="button1" onclick="nextCat('bad')">
+        <img src="img/notGood.jpg" alt="Not Good" />
+      </div>
+      <div class="button2" onclick="nextCat('love')">
+        <img src="img/like.jpg" alt="Like" />
+      </div>
+      <div class="button3" onclick="nextCat('good')">
+        <img src="img/good.jpg" alt="Good" />
+      </div>
+    </article>
+    <article class="cat cat9">
+      <div class="card">
+        <div class="wrapperImage">
+          <img id='img9' src="img/9.jpg" alt="Stas" />
+          <script>
+            swipe(2)
+          </script>
+        </div>
+        <div class="beforeLine">
+          <p class="name">English</p>
+          <p class="age">2 years</p>
+        </div>
+      </div>
+      <div class="button1" onclick="nextCat('bad')">
+        <img src="img/notGood.jpg" alt="Not Good" />
+      </div>
+      <div class="button2" onclick="nextCat('love')">
+        <img src="img/like.jpg" alt="Like" />
+      </div>
+      <div class="button3" onclick="nextCat('good')">
+        <img src="img/good.jpg" alt="Good" />
+      </div>
+    </article>
+    <article class="cat cat3">
+      <div class="card">
+        <div class="wrapperImage">
+          <img id='img3' src="img/3.jpg" alt="Pirogok" />
+          <script>
+            swipe(3)
+          </script>
+        </div>
+        <div class="beforeLine">
+          <p class="name">Мяухрю</p>
+          <p class="age">6 месяцев</p>
+        </div>
+      </div>
+      <div class="button1" onclick="nextCat('bad')">
+        <img src="img/notGood.jpg" alt="Not Good" />
+      </div>
+      <div class="button2" onclick="nextCat('love')">
+        <img src="img/like.jpg" alt="Like" />
+      </div>
+      <div class="button3" onclick="nextCat('good')">
+        <img src="img/good.jpg" alt="Good" />
+      </div>
+    </article>
+    <article class="cat cat2">
+      <div class="card">
+        <div class="wrapperImage">
+          <img id='img2' src="img/2.jpg" alt="Andrey" />
+          <script>
+            swipe(4)
+          </script>
+        </div>
+        <div class="beforeLine">
+          <p class="name">Кристмас</p>
+          <p class="age">3 месяца</p>
+        </div>
+      </div>
+      <div class="button1" onclick="nextCat('bad')">
+        <img src="img/notGood.jpg" alt="Not Good" />
+      </div>
+      <div class="button2" onclick="nextCat('love')">
+        <img src="img/like.jpg" alt="Like" />
+      </div>
+      <div class="button3" onclick="nextCat('good')">
+        <img src="img/good.jpg" alt="Good" />
+      </div>
+    </article>
+    <article class="cat cat4">
+      <div class="card">
+        <div class="wrapperImage">
+          <img id='img4' src="img/4.jpg" alt="Valeriya" />
+          <script>
+            swipe(5)
+          </script>
+        </div>
+        <div class="beforeLine">
+          <p class="name">Сонленд</p>
+          <p class="age">2 годика</p>
+        </div>
+      </div>
+      <div class="button1" onclick="nextCat('bad')">
+        <img src="img/notGood.jpg" alt="Not Good" />
+      </div>
+      <div class="button2" onclick="nextCat('love')">
+        <img src="img/like.jpg" alt="Like" />
+      </div>
+      <div class="button3" onclick="nextCat('good')">
+        <img src="img/good.jpg" alt="Good" />
+      </div>
+    </article>
+    <article class="cat cat5">
+      <div class="card">
+        <div class="wrapperImage">
+          <img id='img5' src="img/5.jpg" alt="Rizhik" />
+          <script>
+            swipe(6)
+          </script>
+        </div>
+        <div class="beforeLine">
+          <p class="name">Рыжик</p>
+          <p class="age">5 лет</p>
+        </div>
+      </div>
+      <div class="button1" onclick="nextCat('bad')">
+        <img src="img/notGood.jpg" alt="Not Good" />
+      </div>
+      <div class="button2" onclick="nextCat('love')">
+        <img src="img/like.jpg" alt="Like" />
+      </div>
+      <div class="button3" onclick="nextCat('good')">
+        <img src="img/good.jpg" alt="Good" />
+      </div>
+    </article>
+    <article class="cat cat6">
+      <div class="card">
+        <div class="wrapperImage">
+          <img id='img6' src="img/6.jpg" alt="Duster" />
+          <script>
+            swipe(7)
+          </script>
+        </div>
+        <div class="beforeLine">
+          <p class="name">Пыльник</p>
+          <p class="age">5 месяцев</p>
+        </div>
+      </div>
+      <div class="button1" onclick="nextCat('bad')">
+        <img src="img/notGood.jpg" alt="Not Good" />
+      </div>
+      <div class="button2" onclick="nextCat('love')">
+        <img src="img/like.jpg" alt="Like" />
+      </div>
+      <div class="button3" onclick="nextCat('good')">
+        <img src="img/good.jpg" alt="Good" />
+      </div>
+    </article>
+    <article class="cat cat8">
+      <div class="card">
+        <div class="wrapperImage">
+          <img id='img8' src="img/8.jpg" alt="Anya" />
+          <script>
+            swipe(8)
+          </script>
+        </div>
+        <div class="beforeLine">
+          <p class="name">Огурец</p>
+          <p class="age">1 годик</p>
+        </div>
+      </div>
+      <div class="button1" onclick="nextCat('bad')">
+        <img src="img/notGood.jpg" alt="Not Good" />
+      </div>
+      <div class="button2" onclick="nextCat('love')">
+        <img src="img/like.jpg" alt="Like" />
+      </div>
+      <div class="button3" onclick="nextCat('good')">
+        <img src="img/good.jpg" alt="Good" />
+      </div>
+    </article>
+    <article class="cat cat10">
+      <div class="card">
+        <div class="wrapperImage">
+          <img id='img10' src="img/10.jpg" alt="Tanya" />
+          <script>
+            swipe(9)
+          </script>
+        </div>
+        <div class="beforeLine">
+          <p class="name">Кот</p>
+          <p class="age">1 годик</p>
+        </div>
+      </div>
+      <div class="button1" onclick="nextCat('bad')">
+        <img src="img/notGood.jpg" alt="Not Good" />
+      </div>
+      <div class="button2" onclick="nextCat('love')">
+        <img src="img/like.jpg" alt="Like" />
+      </div>
+      <div class="button3" onclick="nextCat('good')">
+        <img src="img/good.jpg" alt="Good" />
+      </div>
+    </article>
+    <article class="cat catEnd">
+      <div class="card">
+        <div class="wrapperImage">
+          <img src="img/end.jpg" alt="Ending photo" />
+        </div>
+        <div class="beforeLine">
+          <p class="name">Thanks</p>
+          <p class="age">For visiting us</p>
+        </div>
+      </div>
+      <div class="button2" onclick="repeatCat()">
+        <img src="img/like.jpg" alt="Good" />
+      </div>
+    </article>
+    <article class="catWait">
+      <img src="img/wait.gif" alt="Waiting" />
+    </article>
+  </section>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>

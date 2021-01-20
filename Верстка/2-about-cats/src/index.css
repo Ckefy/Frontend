@@ -1,0 +1,313 @@
+header {
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: white;
+}
+
+body {
+  margin: 0;
+}
+
+.site-name {
+  width: max-content;
+  margin: 0 auto;
+  font-family: 'PT SansNarrow', sans-serif;
+  font-size: 40px;
+}
+
+.site-name:first-letter {
+  color: red;
+}
+
+.carousel input {
+  display: none;
+}
+
+.carousel label {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.carousel .cats label,
+.carousel .labels label {
+  display: none;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 750px;
+}
+
+.rimg1,
+.rimg2,
+.rimg3,
+.rimg4,
+.rimg5,
+.rimg6,
+.rimg7,
+.rimg8,
+.rimg9,
+.rimg10 {
+  display: none;
+}
+
+.slide1:checked ~ .labels label .img10,
+.slide2:checked ~ .labels label .img1,
+.slide3:checked ~ .labels label .img2,
+.slide4:checked ~ .labels label .img3,
+.slide5:checked ~ .labels label .img4,
+.slide6:checked ~ .labels label .img5,
+.slide7:checked ~ .labels label .img6,
+.slide8:checked ~ .labels label .img7,
+.slide9:checked ~ .labels label .img8,
+.slide10:checked ~ .labels label .img9 {
+  width: 33%;
+  position: absolute;
+  display: block;
+  left: 30px;
+  opacity: 0.7;
+  top: 40px;
+  transform: scale(0.8);
+}
+
+/*
+Decoration
+ */
+.slide1:not(:checked) ~ .cats label:nth-child(1),
+.slide2:not(:checked) ~ .cats label:nth-child(2),
+.slide3:not(:checked) ~ .cats label:nth-child(3),
+.slide4:not(:checked) ~ .cats label:nth-child(4),
+.slide5:not(:checked) ~ .cats label:nth-child(5),
+.slide6:not(:checked) ~ .cats label:nth-child(6),
+.slide7:not(:checked) ~ .cats label:nth-child(7),
+.slide8:not(:checked) ~ .cats label:nth-child(8),
+.slide9:not(:checked) ~ .cats label:nth-child(9),
+.slide10:not(:checked) ~ .cats label:nth-child(10) {
+  width: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+/*
+Decoration
+ */
+.slide1:not(:checked) ~ .cats label .rimg1,
+.slide2:not(:checked) ~ .cats label .rimg2,
+.slide3:not(:checked) ~ .cats label .rimg3,
+.slide4:not(:checked) ~ .cats label .rimg4,
+.slide5:not(:checked) ~ .cats label .rimg5,
+.slide6:not(:checked) ~ .cats label .rimg6,
+.slide7:not(:checked) ~ .cats label .rimg7,
+.slide8:not(:checked) ~ .cats label .rimg8,
+.slide9:not(:checked) ~ .cats label .rimg9,
+.slide10:not(:checked) ~ .cats label .rimg10 {
+  width: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.slide1:checked ~ .cats label .rimg1,
+.slide2:checked ~ .cats label .rimg2,
+.slide3:checked ~ .cats label .rimg3,
+.slide4:checked ~ .cats label .rimg4,
+.slide5:checked ~ .cats label .rimg5,
+.slide6:checked ~ .cats label .rimg6,
+.slide7:checked ~ .cats label .rimg7,
+.slide8:checked ~ .cats label .rimg8,
+.slide9:checked ~ .cats label .rimg9,
+.slide10:checked ~ .cats label .rimg10 {
+  transition: width 300ms;
+  width: 33%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.slide1:checked ~ .labels label .img2,
+.slide2:checked ~ .labels label .img3,
+.slide3:checked ~ .labels label .img4,
+.slide4:checked ~ .labels label .img5,
+.slide5:checked ~ .labels label .img6,
+.slide6:checked ~ .labels label .img7,
+.slide7:checked ~ .labels label .img8,
+.slide8:checked ~ .labels label .img9,
+.slide9:checked ~ .labels label .img10,
+.slide10:checked ~ .labels label .img1 {
+  width: 33%;
+  position: absolute;
+  display: block;
+  right: 30px;
+  opacity: 0.7;
+  top: 40px;
+  transform: scale(0.8);
+}
+
+/*
+Center
+ */
+.slide1:checked ~ .cats label:nth-child(1),
+.slide2:checked ~ .cats label:nth-child(2),
+.slide3:checked ~ .cats label:nth-child(3),
+.slide4:checked ~ .cats label:nth-child(4),
+.slide5:checked ~ .cats label:nth-child(5),
+.slide6:checked ~ .cats label:nth-child(6),
+.slide7:checked ~ .cats label:nth-child(7),
+.slide8:checked ~ .cats label:nth-child(8),
+.slide9:checked ~ .cats label:nth-child(9),
+.slide10:checked ~ .cats label:nth-child(10) {
+  display: block;
+}
+
+.slide1:checked ~ .labels label:nth-child(2),
+.slide2:checked ~ .labels label:nth-child(3),
+.slide3:checked ~ .labels label:nth-child(4),
+.slide4:checked ~ .labels label:nth-child(5),
+.slide5:checked ~ .labels label:nth-child(6),
+.slide6:checked ~ .labels label:nth-child(7),
+.slide7:checked ~ .labels label:nth-child(8),
+.slide8:checked ~ .labels label:nth-child(9),
+.slide9:checked ~ .labels label:nth-child(10),
+.slide10:checked ~ .labels label:nth-child(1) {
+  display: block;
+}
+
+.slide1:checked ~ .labels label:nth-last-child(1),
+.slide2:checked ~ .labels label:nth-last-child(10),
+.slide3:checked ~ .labels label:nth-last-child(9),
+.slide4:checked ~ .labels label:nth-last-child(8),
+.slide5:checked ~ .labels label:nth-last-child(7),
+.slide6:checked ~ .labels label:nth-last-child(6),
+.slide7:checked ~ .labels label:nth-last-child(5),
+.slide8:checked ~ .labels label:nth-last-child(4),
+.slide9:checked ~ .labels label:nth-last-child(3),
+.slide10:checked ~ .labels label:nth-last-child(2) {
+  display: block;
+}
+
+.modalWindow1,
+.modalWindow2,
+.modalWindow3,
+.modalWindow4,
+.modalWindow5,
+.modalWindow6,
+.modalWindow7,
+.modalWindow8,
+.modalWindow9,
+.modalWindow10 {
+  display: block;
+  width: 0;
+}
+
+.openModal1:not(:checked) ~ .modalWindow1 > *,
+.openModal2:not(:checked) ~ .modalWindow2 > *,
+.openModal3:not(:checked) ~ .modalWindow3 > *,
+.openModal4:not(:checked) ~ .modalWindow4 > *,
+.openModal5:not(:checked) ~ .modalWindow5 > *,
+.openModal6:not(:checked) ~ .modalWindow6 > *,
+.openModal7:not(:checked) ~ .modalWindow7 > *,
+.openModal8:not(:checked) ~ .modalWindow8 > *,
+.openModal9:not(:checked) ~ .modalWindow9 > *,
+.openModal10:not(:checked) ~ .modalWindow10 > * {
+  display: none;
+}
+
+.openModal1:checked ~ .modalWindow1,
+.openModal2:checked ~ .modalWindow2,
+.openModal3:checked ~ .modalWindow3,
+.openModal4:checked ~ .modalWindow4,
+.openModal5:checked ~ .modalWindow5,
+.openModal6:checked ~ .modalWindow6,
+.openModal7:checked ~ .modalWindow7,
+.openModal8:checked ~ .modalWindow8,
+.openModal9:checked ~ .modalWindow9,
+.openModal10:checked ~ .modalWindow10 {
+  transition: width 500ms;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  right: 100%;
+  bottom: 100%;
+  left: 0;
+  z-index: 999;
+}
+
+.info {
+  position: absolute;
+  width: 70%;
+  height: 60%;
+  top: 20%;
+  left: 15%;
+  z-index: 1999;
+}
+
+.info label img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5%;
+  height: auto;
+}
+
+.info .image img {
+  position: absolute;
+  width: 55%;
+  height: 100%;
+}
+
+.info .someText {
+  padding-left: 25px;
+  top: 20%;
+  left: 55%;
+  position: absolute;
+  width: 30%;
+  height: 30%;
+}
+
+.info .someText .name {
+  margin-bottom: 10px;
+  font-size: 40px;
+  color: white;
+}
+
+.info .someText .annotation,
+.info .someText .age,
+.info .someText .spice,
+.info .someText .illness,
+.info .someText .long-description {
+  font-size: 25px;
+  margin-bottom: 7px;
+  color:white;
+}
+
+.copyrighting {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 2%;
+  padding-bottom: 1%;
+  font-size: 15px;
+  text-align: left;
+}
+
+.contacts {
+  position: absolute;
+  bottom: 0;
+  padding-left: 1%;
+  font-size: 15px;
+  text-align: left;
+}
+
+li {
+  list-style-type: none;
+}
+
+.link-foot {
+  color: #4c4cd8;
+  text-decoration: none;
+}

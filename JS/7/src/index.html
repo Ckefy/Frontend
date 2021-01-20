@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--https://www.w3schools.com/css/css_rwd_viewport.asp-->
+  <title>Aviasales - поиск дешевых авиабилетов!</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<!--wrapper-->
+
+
+<form>
+  <div>
+    <button type="submit">kek</button>
+  </div>
+</form>
+<div class="search-box">
+  <article class="search-box__logo">
+    Яндекс
+  </article>
+  <label for="search"></label>
+  <input type="text" id="search" class="search-input" placeholder="Нижнее Пыхчево"
+         autocomplete="off" oninput="makeSuggest()">
+  <button class="search-box__button" onclick="searchContent()">Найти</button>
+  <span class="helping__span"></span>
+</div>
+<div class="suggests-wrapper"></div>
+
+<script src="index.js"></script>
+</body>
+</html>

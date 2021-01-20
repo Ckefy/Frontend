@@ -1,0 +1,395 @@
+@font-face {
+  font-family: "Yandex";
+  src: url("fonts/ptsansnarrow/sansnarrow.ttf");
+}
+
+body {
+  display: grid;
+  grid-template-areas: 'header' 'news' 'navigate' 'search' 'banner' 'widgets';
+  grid-gap: 30px;
+  grid-template-rows: 70px 220px 50px 200px 150px 200px;
+}
+
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-areas: "header__city empty header__settings mail";
+  grid-template-columns: 200px 1000px 180px 200px;
+}
+
+.header__city {
+  grid-area: header__city;
+  text-align: left;
+  color: darkgray;
+  padding: 12px;
+}
+
+.header__settings {
+  grid-area: header__settings;
+  padding: 16px;
+}
+
+.mail {
+  margin-top: 4px;
+  grid-area: mail;
+  text-align: left;
+  box-shadow: 0 0 2px lightgrey;
+  border: 1px lightgrey solid;
+  padding: 12px;
+}
+
+.mail .header__login {
+  font-weight: bold;
+}
+
+.mail:hover {
+  box-shadow: 0 0 2px black;
+  cursor: pointer;
+}
+
+.mail .header__login::first-letter {
+  color: red;
+}
+
+.news {
+  margin-left: 40px;
+  grid-area: news;
+  display: grid;
+  grid-template-areas: "emptyNews1 news-block news__ads emptyNews2";
+  grid-template-columns: 200px 700px 700px 300px;
+}
+
+.news-block {
+  grid-area: news-block;
+  display: grid;
+  grid-template-areas: 'news-block__headerNews1 news-block__headerNews2 news-block__headerNews3'
+                       'news-block__contentNews news-block__contentNews news-block__contentNews';
+  grid-template-columns: 180px 150px 400px;
+  grid-template-rows: 15px 100px;
+}
+
+.news-block__headerNews1,
+.news-block__headerNews2,
+.news-block__headerNews3 {
+  font-weight: bold;
+}
+
+.news-block__headerNews1 {
+  grid-area: news-block__headerNews1;
+  font-size: 23px;
+  text-align: right;
+  line-height: 19px;
+  color: rgba(0, 0, 255, 0.65);
+}
+
+.news-block__headerNews2 {
+  grid-area: news-block__headerNews2;
+  font-size: 21px;
+  text-align: center;
+  line-height: 22px;
+  color: rgba(0, 0, 255, 0.5);
+}
+
+.news-block__headerNews3 {
+  text-align: left;
+  grid-area: news-block__headerNews3;
+  font-size: 19px;
+  line-height: 23px;
+  color: darkgray;
+}
+
+.news-block__contentNews {
+  grid-area: news-block__contentNews;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.news__ads {
+  grid-area: news__ads;
+}
+
+.news__ads img {
+  width: 170px;
+  height: 220px;
+}
+
+.settingsWindowButton {
+  display: none;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+.navigate {
+  padding-top: 30px;
+  grid-area: navigate;
+  margin-top: 20px;
+  margin-left: 280px;
+}
+
+.navigate__li {
+  margin-right: 20px;
+}
+
+.search-box {
+  grid-area: search;
+  display: flex;
+  align-items: center;
+}
+
+.search-box__logo {
+  font-family: Yandex, sans-serif;
+  font-size: 40px;
+  padding: 10px 20px 10px 100px;
+}
+
+.search-box__logo:first-letter {
+  color: red;
+}
+
+.search-input {
+  display: block;
+  width: 1000px;
+  padding: 15px;
+  border: 2px solid #f3ce00;
+}
+
+.search-box__button {
+  padding: 15px;
+  background-color: #f3ce00;
+  border: 2px solid #f3ce00;
+}
+
+.banner {
+  margin-top: 15px;
+  margin-left: 255px;
+}
+
+.banner img {
+  width: 1030px;
+  height: 200px;
+}
+
+.widgets {
+  display: grid;
+  grid-template-columns: 350px 410px 410px;
+  grid-column-gap: 30px;
+  grid-area: widgets;
+  margin-left: 250px;
+}
+
+.widget {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.widget__add-meme {
+  color: dodgerblue;
+  text-decoration: underline;
+}
+
+.widget,
+.widgets__columnWidget1,
+.widgets__columnWidget2,
+.widgets__columnWidget3 {
+  margin-bottom: 10px;
+  display: none;
+}
+
+.widget__shadow {
+  width: 100%;
+  height: 23px;
+  margin-bottom: 1px;
+  position: absolute;
+}
+
+.widget__shadow-begin {
+  background: linear-gradient(rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 0) 100%);
+}
+
+.widget__shadow-end {
+  height: 30px;
+  bottom: -320px;
+  background: linear-gradient(rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.9) 80%, rgba(255, 255, 255, 1) 100%);
+}
+
+.widget__add {
+  margin-left: 5px;
+  text-decoration: none;
+  color: darkgray;
+  font-size: 14px;
+}
+
+.icon {
+  width: 17px;
+  margin: 0 7px;
+}
+
+.widget__li,
+.widget__header {
+  text-decoration: none;
+  color: black;
+  margin: 10px 0 0 5px;
+}
+
+.widget__header {
+  color: rgba(0, 0, 255, 0.65);
+  font-size: 22px;
+}
+
+.widgetAdd {
+  color: black;
+  font-weight: normal;
+}
+
+.widget__scroll {
+  height: 270px;
+  display: flex;
+  overflow: scroll;
+  overflow-x: hidden;
+  flex-direction: column;
+}
+
+.button-setting-11:checked ~ main .widgets .widgets__columnWidget1,
+.button-setting-12:checked ~ main .widgets .widgets__columnWidget1,
+.button-setting-21:checked ~ main .widgets .widgets__columnWidget2,
+.button-setting-22:checked ~ main .widgets .widgets__columnWidget2,
+.button-setting-31:checked ~ main .widgets .widgets__columnWidget3,
+.button-setting-32:checked ~ main .widgets .widgets__columnWidget3,
+.button-setting-33:checked ~ main .widgets .widgets__columnWidget3,
+.button-setting-34:checked ~ main .widgets .widgets__columnWidget3 {
+  display: block;
+}
+
+.button-setting-11:checked ~ main .widgets .widgets__columnWidget1 .widget11,
+.button-setting-12:checked ~ main .widgets .widgets__columnWidget1 .widget12,
+.button-setting-21:checked ~ main .widgets .widgets__columnWidget2 .widget21,
+.button-setting-22:checked ~ main .widgets .widgets__columnWidget2 .widget22,
+.button-setting-31:checked ~ main .widgets .widgets__columnWidget3 .widget31,
+.button-setting-32:checked ~ main .widgets .widgets__columnWidget3 .widget32,
+.button-setting-33:checked ~ main .widgets .widgets__columnWidget3 .widget33,
+.button-setting-34:checked ~ main .widgets .widgets__columnWidget3 .widget34 {
+  display: flex;
+}
+
+.widget_two {
+  margin-top: 5px;
+}
+
+.widget_two .widget__li {
+  margin-right: 5px;
+}
+
+.labelMeme1,
+.labelMeme2,
+.labelMeme3,
+.labelMeme4,
+.labelMeme5 {
+  margin-top: 30px;
+  margin-left: 5px;
+  font-size: 18px;
+  color: cornflowerblue;
+}
+
+.widget__meme1,
+.widget__meme2,
+.widget__meme3,
+.widget__meme4,
+.widget__meme5,
+.labelMeme1,
+.labelMeme2,
+.labelMeme3,
+.labelMeme4,
+.labelMeme5,
+.widget__meme-button1,
+.widget__meme-button2,
+.widget__meme-button3,
+.widget__meme-button4,
+.widget__meme-button5 {
+  display: none;
+}
+
+.widget__meme-button1:checked ~ .widget__meme1,
+.widget__meme-button1:checked ~ .labelMeme2,
+.widget__meme-button2:checked ~ .widget__meme2,
+.widget__meme-button2:checked ~ .labelMeme3,
+.widget__meme-button3:checked ~ .widget__meme3,
+.widget__meme-button3:checked ~ .labelMeme4,
+.widget__meme-button4:checked ~ .widget__meme4,
+.widget__meme-button4:checked ~ .labelMeme5,
+.widget__meme-button5:checked ~ .widget__meme5,
+.widget__meme-button5:checked ~ .labelMeme1 {
+  display: block;
+}
+
+.modal-window {
+  position: absolute;
+  display: none;
+}
+
+.modal-window label {
+  display: none;
+}
+
+.settingsWindowButton:checked ~ .modal-window {
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 1120px;
+  top: 60px;
+  background-color: white;
+  box-shadow: 0 0 15px darkgray;
+  z-index: 1000;
+}
+
+.settingsWindowButton:checked ~ .modal-window label {
+  display: block;
+}
+
+.modal-window {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-window label {
+  padding: 10px 0 0 10px;
+}
+
+.button-setting {
+  display: none;
+}
+
+.button-setting-11 ~ .modal-window label[for="button11"]:before,
+.button-setting-12 ~ .modal-window label[for="button12"]:before,
+.button-setting-21 ~ .modal-window label[for="button21"]:before,
+.button-setting-22 ~ .modal-window label[for="button22"]:before,
+.button-setting-31 ~ .modal-window label[for="button31"]:before,
+.button-setting-32 ~ .modal-window label[for="button32"]:before,
+.button-setting-33 ~ .modal-window label[for="button33"]:before,
+.button-setting-34 ~ .modal-window label[for="button34"]:before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #adb5bd;
+  margin-right: 6px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 95%;
+}
+
+.button-setting-11:checked ~ .modal-window label[for="button11"]:before,
+.button-setting-12:checked ~ .modal-window label[for="button12"]:before,
+.button-setting-21:checked ~ .modal-window label[for="button21"]:before,
+.button-setting-22:checked ~ .modal-window label[for="button22"]:before,
+.button-setting-31:checked ~ .modal-window label[for="button31"]:before,
+.button-setting-32:checked ~ .modal-window label[for="button32"]:before,
+.button-setting-33:checked ~ .modal-window label[for="button33"]:before,
+.button-setting-34:checked ~ .modal-window label[for="button34"]:before {
+  border-color: rgba(55, 58, 243, 0.3);
+  background-color: rgba(55, 58, 243, 0.3);
+  background-image: url("img/yen.png");
+}

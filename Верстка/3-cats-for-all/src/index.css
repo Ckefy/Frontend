@@ -1,0 +1,377 @@
+body {
+  display: grid;
+  grid-template-areas: 'header' 'main' 'footer';
+  grid-row-gap: 100px;
+  margin: 0;
+}
+
+header {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  grid-area: header;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid lightsteelblue;
+  padding: 10px;
+}
+
+.site {
+  width: max-content;
+  font-size: 32px;
+  font-family: 'PT SansNarrow', sans-serif;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+.site::first-letter {
+  color: crimson;
+}
+
+main {
+  grid-area: main;
+  padding: 2%;
+}
+
+.cats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: start;
+}
+
+/* This grid for non-desktop only*/
+.cat {
+  display: grid;
+  overflow: hidden;
+  grid-template-areas: 'image' 'beforeLine';
+  border: 1px solid lightsteelblue;
+  width: 75%;
+  margin: 30px auto;
+}
+
+.cat:hover {
+  box-shadow: 0 0 3px cornflowerblue;
+}
+
+img:hover {
+  transform: scale(1.04);
+  transition: 800ms;
+}
+
+.wrapperImage {
+  grid-area: image;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.beforeLine {
+  margin: 0 2% 2% 2%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/*Imitation of separator*/
+.short-description {
+  padding-top: 4%;
+}
+
+.afterLine p {
+  margin-top: 2.5%;
+}
+
+.separ {
+  padding-top: 1%;
+}
+
+.name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  padding-bottom: 1%;
+  font-weight: bold;
+  color: black;
+}
+
+.link-name,
+footer .footLink {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link-name:visited {
+  color: black;
+}
+
+.link-name:active {
+  color: black;
+}
+
+.link-name:hover {
+  color: cornflowerblue;
+}
+
+.afterLine {
+  display: none;
+}
+
+footer {
+  grid-area: footer;
+  padding: 1%;
+  display: flex;
+  align-content: start;
+  border-top: 1px solid lightsteelblue;
+}
+
+footer .footLink:visited {
+  color: cornflowerblue;
+}
+
+footer .footLink:active {
+  color: cornflowerblue;
+}
+
+footer .footLink:hover {
+  color: lightsteelblue;
+}
+
+.desktopMenu {
+  display: none;
+}
+
+.wrapperSep {
+  display: none;
+}
+
+input[name='spiceChoice'] {
+  display: none;
+}
+
+/*Mobile*/
+@media screen and (min-width: 375px) and (max-width: 730px) {
+  footer {
+    flex-wrap: wrap;
+    justify-content: start;
+    flex-direction: column;
+  }
+
+  .mail {
+    margin: 1% 0 1% 0;
+  }
+
+  .mail::before {
+    content: '\2709';
+  }
+
+  .copyrighting {
+    margin: 2% 0 1% 0;
+  }
+}
+
+/*Tab*/
+@media screen and (min-width: 731px) and (max-width: 1199px) {
+  .cat {
+    flex-basis: 32%;
+  }
+
+  footer {
+    display: grid;
+    grid-template:
+      'a b c' 1fr
+      'a b c' 1fr
+      'a b c' 1fr / 1fr 1fr 1fr;
+    grid-gap: 0;
+  }
+
+  .mail1 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .mail2 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  .copyrighting {
+    text-align: right;
+    grid-row: 3;
+    grid-column: 3;
+  }
+
+  .mail::before {
+    content: '\2709';
+  }
+
+}
+
+/*Desktop*/
+@media screen and (min-width: 1200px) {
+  main {
+    display: grid;
+    grid-template-areas: 'cats desktopMenu';
+    grid-template-columns: 80% auto;
+  }
+
+  .cats {
+    grid-area: cats;
+  }
+
+  .cat {
+    margin: 2% auto;
+    grid-template-areas:
+      'image short'
+      'long long';
+    grid-template-columns: 55% auto;
+    grid-template-rows: 70% auto;
+    flex-basis: 48%;
+    height: 390px;
+  }
+
+  .beforeLine {
+    grid-area: short;
+  }
+
+  .afterLine {
+    grid-area: long;
+    display: block;
+    padding-left: 2%;
+    padding-right: 2%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-top: 1px solid lightsteelblue;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .cat:hover > .afterLine {
+    box-shadow: 0 0 2px cornflowerblue;
+  }
+
+  .wrapperImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  /*Desktop menu block*/
+  .desktopMenu {
+    grid-area: desktopMenu;
+    display: block;
+  }
+
+  .desktopMenu .spiceButton label {
+    display: block;
+    cursor: pointer;
+    transition-duration: 0.7ms;
+    border: 1px solid darkgray;
+    height: 22px;
+    margin: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 500;
+  }
+
+  .wrapperAge1,
+  .wrapperSpice {
+    margin: 10px 10px 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .wrapperAge2 {
+    margin-top: 5px;
+    font-size: 15px;
+  }
+
+  input[class='1spice']:checked ~ .desktopMenu .spiceButton label[for='1spice'],
+  input[class='2spice']:checked ~ .desktopMenu .spiceButton label[for='2spice'],
+  input[class='3spice']:checked ~ .desktopMenu .spiceButton label[for='3spice'],
+  input[class='4spice']:checked ~ .desktopMenu .spiceButton label[for='4spice'],
+  input[class='5spice']:checked ~ .desktopMenu .spiceButton label[for='5spice'],
+  input[class='allSpice']:checked ~ .desktopMenu .spiceButton label[for='allSpice'] {
+    background-color: cornflowerblue;
+  }
+
+  .ageRange {
+    width: 90%;
+    height: 4px;
+  }
+  /*Desktop menu block ends*/
+
+  footer {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.5fr 1fr 7fr;
+    text-align: left;
+  }
+
+  .followUs:before {
+    content: '\2709';
+  }
+
+  .followUs {
+    grid-column: 1;
+  }
+
+  .mail1 {
+    grid-column: 2;
+  }
+
+  .wrapperSep {
+    display: block;
+    grid-column: 3;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+  }
+
+  .mail2 {
+    grid-column: 4;
+  }
+
+  .copyrighting {
+    grid-column: 5;
+    text-align: right;
+  }
+
+  .cats .cat {
+    display: none;
+  }
+
+  input[class='allSpice']:checked ~ .cats .cat {
+    display: grid;
+  }
+
+  input[class='1spice']:checked ~ .cats .cat1,
+  input[class='1spice']:checked ~ .cats .cat2,
+  input[class='1spice']:checked ~ .cats .cat4,
+  input[class='1spice']:checked ~ .cats .cat5,
+  input[class='1spice']:checked ~ .cats .cat6,
+  input[class='1spice']:checked ~ .cats .cat7,
+  input[class='1spice']:checked ~ .cats .cat8,
+  input[class='1spice']:checked ~ .cats .cat9,
+  input[class='1spice']:checked ~ .cats .cat10,
+  input[class='2spice']:checked ~ .cats .cat3,
+  input[class='2spice']:checked ~ .cats .cat1,
+  input[class='2spice']:checked ~ .cats .cat8,
+  input[class='3spice']:checked ~ .cats .cat1,
+  input[class='3spice']:checked ~ .cats .cat3,
+  input[class='3spice']:checked ~ .cats .cat8,
+  input[class='3spice']:checked ~ .cats .cat10,
+  input[class='4spice']:checked ~ .cats .cat4,
+  input[class='4spice']:checked ~ .cats .cat7,
+  input[class='4spice']:checked ~ .cats .cat9,
+  input[class='5spice']:checked ~ .cats .cat5,
+  input[class='5spice']:checked ~ .cats .cat6,
+  input[class='5spice']:checked ~ .cats .cat7 {
+    display: grid;
+  }
+}

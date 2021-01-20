@@ -1,0 +1,198 @@
+body {
+  width: 1700px;
+}
+
+.wrapper-center {
+  display: flex;
+  justify-content: space-around;
+  align-content: start;
+}
+
+.main-part {
+  width: 1500px;
+  padding: 30px;
+}
+
+input {
+  display: none;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 200px 1100px 200px;
+}
+
+.header-name {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 120px 66px;
+}
+
+.input-color1:checked ~ .wrapper-center .main-part {
+  color: black;
+  background-color: white;
+  border: 3px solid black;
+}
+
+.input-color1:checked ~ .wrapper-center header {
+  border: 2px solid black;
+}
+
+.input-color2:checked ~ .wrapper-center .main-part {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 3px solid crimson;
+}
+
+.input-color2:checked ~ .wrapper-center header {
+  border: 2px solid crimson;
+}
+
+.input-color1:checked ~ .wrapper-center .nameSong {
+  color: green;
+}
+
+.input-color2:checked ~ .wrapper-center .nameSong {
+  color: crimson;
+}
+
+.input-color1:checked ~ .wrapper-center .header-name-h1 {
+  line-height: 120px;
+  font-size: 70px;
+  text-shadow: 5px 5px 5px #f00,
+  -5px -5px 5px #0f0;
+}
+
+.input-color2:checked ~ .wrapper-center .header-name-h1 {
+  line-height: 120px;
+  font-size: 70px;
+  text-shadow: 5px 5px 5px green,
+  -5px -5px 5px blue;
+}
+
+.input-color1:checked ~ .wrapper-center .header-name-h2 {
+  line-height: 66px;
+  font-size: 40px;
+}
+
+.input-color2:checked ~ .wrapper-center .header-name-h2 {
+  line-height: 66px;
+  font-size: 40px;
+}
+
+.input-size1:not(:checked) ~ .wrapper-center .header-name-h1 {
+  font-size: 80px;
+}
+
+.input-size1:not(:checked) ~ .wrapper-center .header-name-h2 {
+  font-size: 50px;
+}
+
+.switchers {
+  line-height: 1.7;
+}
+
+label {
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.input-color1:checked ~ .wrapper-center label {
+  border: 1px solid darkviolet;
+}
+
+.input-size1:checked ~ .wrapper-center .switcher-size-1,
+.input-size2:checked ~ .wrapper-center .switcher-size-2,
+.input-color1:checked ~ .wrapper-center .switcher-color-1,
+.input-color2:checked ~ .wrapper-center .switcher-color-2,
+.input-style1:checked ~ .wrapper-center .switcher-style-1,
+.input-style2:checked ~ .wrapper-center .switcher-style-2 {
+  background-color: beige;
+  color: black;
+}
+
+.input-color2:checked ~ .wrapper-center label {
+  border: 1px solid red;
+}
+
+li {
+  list-style-type: none;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 700px 100px 700px;
+  line-height: 1.5;
+  font-family: "Georgia", cursive;
+}
+
+.contentLeft,
+.contentRight {
+  font-size: 20px;
+  column-count: 2;
+}
+
+.input-size1:not(:checked) ~ .wrapper-center .contentLeft,
+.input-size1:not(:checked) ~ .wrapper-center .vertical,
+.input-size1:not(:checked) ~ .wrapper-center .contentRight {
+  font-size: 25px;
+}
+
+.input-size1:not(:checked) ~ .wrapper-center .nameSong {
+  font-size: 43px;
+}
+
+.input-size1:not(:checked) ~ .wrapper-center .quote {
+  font-size: 35px;
+}
+
+.contentFirst::first-letter {
+  font-size: 25px;
+  font-family: "Gill Sans", cursive;
+  color: red;
+}
+
+.nameSong {
+  margin: 15px;
+  font-size: 40px;
+  column-span: all;
+  text-align: center;
+}
+
+.vertical {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 20px;
+}
+
+.contentLeft .concert,
+.contentRight .concert {
+  margin: 20px;
+  column-span: all;
+  font-family: "Arial", serif;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.quote {
+  margin-top: 50px;
+  column-span: all;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.contentLeft .concert img,
+.contentRight .concert img {
+  width: 600px;
+}
+
+.vertical {
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+}
+
+.input-style2:checked ~ .wrapper-center .main-part {
+  font-family: "Times New Roman", sans-serif;
+  font-style: italic;
+}
